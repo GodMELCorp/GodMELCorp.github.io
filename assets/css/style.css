@@ -144,6 +144,14 @@ p {
   padding: 10px;
 }
 
+p2 {
+  color: black;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 10px;
+  padding: 40px;
+}
+
 .row {
   margin-top: 5%;
   display: flex;
@@ -160,6 +168,20 @@ p {
   transition: 0.5s;
   text-decoration: none;
   color: black;
+}
+.liste-sout {
+  text-align: left;
+  font-size: 17px;
+}
+
+row56 {
+  display: flex;
+}
+
+.col56 {
+  flex: 1; 
+  padding: 1em;
+  border: solid;
 }
 
 h3 {
@@ -196,6 +218,7 @@ h3 {
 .fa-heart-o {
   color: #f44336;
 }
+
 
 /* ---------- Histoire ------- */
 
@@ -249,6 +272,12 @@ img {
   transition: 0.5s;
 }
 
+.col2 {
+  flex-basis: 31%;
+  margin-bottom: 5%;
+  padding: 10px;
+}
+
 .col1 p {
   color: black;
   font-size: medium;
@@ -258,6 +287,15 @@ img {
 .col1 h3 {
   color: whitesmoke;
 }
+
+#column_gap {
+  column-count: 1;
+  column-gap: 2em;
+}
+#row_gap {
+  row-gap: 2;
+}
+
 
 /* -------------liens---------- */
 
@@ -314,5 +352,22 @@ img {
   to {
     filter: hue-rotate(360deg);
   }
+}
+
+/* -------------Down---------- */
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-count: 2;
+}
+
+table2 {
+  border-collapse: collapse;
+}
+
+td2 {
+  padding: 10px;
 }
 
