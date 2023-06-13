@@ -78,20 +78,6 @@ nav img {
   color: transparent;
 }
 
-.text-box5 {
-  /*color: white;*/
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background: -webkit-linear-gradient(top, #070927 , #d33c0e );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
 .custom-button {
   border-right-color: transparent !important;
 }
