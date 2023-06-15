@@ -78,25 +78,42 @@ nav img {
   color: transparent;
 }
 
-.custom-button {
-  border-right-color: transparent !important;
-}
-
-.text-box h1 {
-  font-size: 100px;
-  background: -webkit-linear-gradient(top, #d33c0e 10%, #1e224c 90%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
+@media (max-width: 768px) {
+  .text-box h1 {
+    font-size: 13vw;
+    background: -webkit-linear-gradient(top, #d33c0e 10%, #1e224c 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
 .text-box p {
-  font-size: 35px;
+  font-size: 6vw;
+  color: #171a3d;
+}
+}
+
+@media (min-width: 769px) {
+  .text-box h1 {
+    font-size: 110px;
+    background: -webkit-linear-gradient(top, #d33c0e 10%, #1e224c 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+.text-box p {
+  font-size: 50px;
   /*background: -webkit-linear-gradient(top,#1e224c , #010209 );*/
   /*background-clip: text;*/
   /*-webkit-background-clip: text;*/
   /*color: transparent;*/
   color: #171a3d;
+}
+}
+
+.custom-button {
+  border-right-color: transparent !important;
 }
 
 .bouton {
@@ -184,11 +201,7 @@ p2 {
   padding: 40px;
 }
 
-.row {
-  margin-top: 5%;
-  display: flex;
-  justify-content: space-between;
-}
+
 
 
 .col {
@@ -274,6 +287,17 @@ img {
   height: auto;
 }
 
+.row36 {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.row36 p {
+  font-size: x-large;
+  color: #070927;
+  font-family: 'Dancing Script', cursive;
+}
+
 .row1 {
   margin-left: 100px;
   margin-right: 100px;
@@ -290,9 +314,45 @@ img {
   display: flex;
   justify-content: space-between;
 }
+/* Ajout de la règle pour les écrans de taille très petite */
+@media (max-width: 390px) {
+  .col1 {
+    flex-basis: 90%; /* Réduire la flex-basis à 50% pour afficher 2 éléments par ligne */
+  }
+}
+
+/* Ajout de la règle pour les écrans de taille petite */
+@media (min-width: 391) and (max-width: 600px) {
+  .col1 {
+    flex-basis: calc(50% - 2.5%); /* Réduire la flex-basis à 50% pour afficher 2 éléments par ligne */
+  }
+}
+
+
+
+@media (min-width: 601px) and (max-width: 1080px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .col1 {
+    flex-basis: calc(50% - 2.5%); /* Réduire la flex-basis à 50% pour afficher 2 éléments par ligne */
+    margin-bottom: 2.5%;
+  }
+}
+
+/* Ajout de la règle pour les écrans de taille moyenne et grande */
+@media (min-width: 1081px) {
+  .col1 {
+    flex-basis: calc(25% - 2.5%); /* Réduire la flex-basis à 25% pour afficher 4 éléments par ligne */
+    margin-bottom: 2.5%; /* Ajouter un espace inférieur de 2.5% pour équilibrer l'espace */
+  }
+}
+
 
 .col1 {
-  flex-basis: 31%;
+  flex-direction: column;
+  flex-grow: 1; /* Ajout de la propriété flex-grow */
   background: -webkit-linear-gradient(top, #1f2574 , #d33c0e );
   border-radius: 10px;
   margin-bottom: 5%;
@@ -302,6 +362,73 @@ img {
   border: 2px solid black;
   box-sizing: border-box;
   transition: 0.5s;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  align-items: center
+}
+.col1 h3 {
+  white-space: nowrap; /* Empêche le texte de se retourner à la ligne */
+  overflow: hidden; /* Masque le texte excédentaire */
+  text-overflow: ellipsis; /* Ajoute des points de suspension si le texte dépasse */
+}
+
+.row {
+  margin-top: 4%;
+  display: flex;
+}
+
+
+@media (min-width: 576px) {
+  .col1-sm {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .col1-md {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+.col1 img {
+  max-width: 100%;
+  height: auto;
+}
+/* Ajout de la règle pour les écrans de taille large */
+@media (min-width: 992px) {
+  .col1 {
+    flex-basis: calc(25% - 2.5%); /* Réduire la flex-basis à 25% pour afficher 4 éléments par ligne */
+    margin-bottom: 2.5%; /* Ajouter un espace inférieur de 2.5% pour équilibrer l'espace */
+  }
+}
+
+@media (min-width: 1200px) {
+  .col1-xl {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+
+.col59 {
+  flex-basis: 31%;
+  background: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  text-decoration: none;
+  color: black;
 }
 
 
